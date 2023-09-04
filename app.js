@@ -1,21 +1,11 @@
 
 
-const div = document.querySelector('ul')
+const div = document.querySelector('div')
 const body = document.querySelector('body')
-const array = ["red", "green", "blue", "pink"];
-div.innerHTML += `<button onclick="changecolors()">${array[0]}</button>
-<button onclick="changecolors1()">${array[1]}</button>
- <button onclick="changecolors2()">${array[2]}</button>
-  <button onclick="changecolors3()">${array[3]}</button>`
-  function changecolors() {
-    body.style.backgroundColor = "red";
+const array = ["red", "green", "blue", "pink" , 'yellow' , 'purple' , 'white'];
+for(i = 0; i < array.length; i++){
+div.innerHTML += `<button onclick="changecolors(${i})">${array[i]}</button>`
 }
-function changecolors1() {
-  body.style.backgroundColor = "green";
-}
-function changecolors2() {
-  body.style.backgroundColor = "blue";
-}
-function changecolors3() {
-  body.style.backgroundColor = "pink";
+  function changecolors(i) {
+    body.style.backgroundColor = `${array[i]}`;
 }
